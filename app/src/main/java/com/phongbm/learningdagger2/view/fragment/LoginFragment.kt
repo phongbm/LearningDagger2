@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.phongbm.learningdagger2.App
 import com.phongbm.learningdagger2.R
 import com.phongbm.learningdagger2.extension.inflate
@@ -73,6 +74,8 @@ class LoginFragment : Fragment(), CoroutineScope, View.OnClickListener {
             val result = loginViewModel.signIn(username, password)
             if (result) {
                 Toast.makeText(context!!, "Successful", Toast.LENGTH_SHORT).show()
+
+                findNavController().navigate(R.id.salesInvoiceFragment, null, null)
             } else {
                 Toast.makeText(context!!, "Failed", Toast.LENGTH_SHORT).show()
             }

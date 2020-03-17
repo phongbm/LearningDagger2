@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @Singleton
 class UserDataSource
 @Inject
-constructor(var userRemoteDataSource: UserRemoteDataSource) {
+constructor(private val userRemoteDataSource: UserRemoteDataSource) {
     suspend fun signIn(username: String, password: String) = userRemoteDataSource.signIn(username, password)
 
 }

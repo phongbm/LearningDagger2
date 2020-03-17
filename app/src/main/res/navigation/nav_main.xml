@@ -9,4 +9,9 @@
         android:id="@+id/loginFragment"
         android:name="com.phongbm.learningdagger2.view.fragment.LoginFragment"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/salesInvoiceFragment"
+        android:name="com.phongbm.learningdagger2.view.invoice.fragment.SalesInvoiceFragment"
+        tools:layout="@layout/fragment_sales_invoice" />
 </navigation>

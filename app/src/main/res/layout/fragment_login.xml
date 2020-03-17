@@ -7,13 +7,22 @@
     android:padding="16dp"
     tools:context=".view.fragment.LoginFragment">
 
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Learning Dagger2" />
+
     <EditText
         android:id="@+id/edtUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:autofillHints="@null"
         android:hint="Username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:text="phongbm" />
 
     <EditText
         android:id="@+id/edtPassword"
@@ -21,7 +30,8 @@
         android:layout_height="wrap_content"
         android:autofillHints="@null"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="123456" />
 
     <Button
         android:id="@+id/btnSignIn"

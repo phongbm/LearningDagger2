@@ -11,10 +11,13 @@ import javax.inject.Singleton
 @Singleton
 @Component(
         modules = [
-            AppModule::class
+            AppModule::class,
+            AppSubcomponentModule::class
         ]
 )
 interface AppComponent {
     fun inject(loginFragment: LoginFragment)
+
+    fun salesInvoiceComponent(): SalesInvoiceComponent.Factory
 
 }
