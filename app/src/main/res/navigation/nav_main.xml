@@ -29,4 +29,14 @@
         android:id="@+id/taskDetailFragment"
         android:name="com.phongbm.learningdagger2.view.task.fragment.TaskDetailFragment"
         tools:layout="@layout/fragment_task_detail" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.phongbm.learningdagger2.view.fragment.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.phongbm.learningdagger2.view.fragment.ProfileEditFragment"
+        tools:layout="@layout/fragment_profile_edit" />
 </navigation>

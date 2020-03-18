@@ -6,33 +6,19 @@
     android:background="@android:color/white"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".view.fragment.HomeFragment">
+    tools:context=".view.fragment.ProfileFragment">
 
     <TextView
         style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home" />
+        android:text="Profile" />
 
     <Button
-        android:id="@+id/btnInvoice"
+        android:id="@+id/btnProfileEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="Open Invoice"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btnTaskMgt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Task Management"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btnProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Profile"
+        android:text="Edit Profile"
         android:textAllCaps="false" />
 </LinearLayout>

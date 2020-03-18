@@ -14,6 +14,7 @@ class HomeFragment : ViewModelBaseFragment<HomeViewModel>() {
     override fun initializeViews() {
         btnInvoice.setOnClickListener(this)
         btnTaskMgt.setOnClickListener(this)
+        btnProfile.setOnClickListener(this)
     }
 
     override fun initializeComponents() {
@@ -28,6 +29,7 @@ class HomeFragment : ViewModelBaseFragment<HomeViewModel>() {
         when (view.id) {
             R.id.btnInvoice -> findNavController().navigate(R.id.salesInvoiceFragment)
             R.id.btnTaskMgt -> findNavController().navigate(R.id.taskMgtFragment)
+            R.id.btnProfile -> findNavController().navigate(R.id.profileFragment)
         }
     }
 
