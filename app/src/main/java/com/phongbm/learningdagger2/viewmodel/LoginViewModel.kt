@@ -1,7 +1,6 @@
 package com.phongbm.learningdagger2.viewmodel
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
+import com.phongbm.learningdagger2.base.BaseViewModel
 import com.phongbm.learningdagger2.repository.UserRepository
 import javax.inject.Inject
 
@@ -11,15 +10,7 @@ import javax.inject.Inject
 
 class LoginViewModel
 @Inject
-constructor(private val userRepository: UserRepository) : ViewModel() {
-    init {
-        Log.d(javaClass.name, "${javaClass.simpleName} was instantiated.")
-    }
-
-    override fun onCleared() {
-        Log.d(javaClass.name, "${javaClass.simpleName} onCleared()...")
-    }
-
+constructor(private val userRepository: UserRepository) : BaseViewModel() {
     suspend fun signIn(username: String, password: String) = userRepository.signIn(username, password)
 
 }

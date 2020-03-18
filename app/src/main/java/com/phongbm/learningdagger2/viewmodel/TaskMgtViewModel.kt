@@ -1,7 +1,6 @@
 package com.phongbm.learningdagger2.viewmodel
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
+import com.phongbm.learningdagger2.base.BaseViewModel
 import com.phongbm.learningdagger2.view.task.di.TaskMgtScope
 import java.util.*
 import javax.inject.Inject
@@ -13,16 +12,8 @@ import javax.inject.Inject
 @TaskMgtScope
 class TaskMgtViewModel
 @Inject
-constructor() : ViewModel() {
+constructor() : BaseViewModel() {
     var number = 0
-
-    init {
-        Log.d(javaClass.name, "${javaClass.simpleName} was instantiated.")
-    }
-
-    override fun onCleared() {
-        Log.d(javaClass.name, "${javaClass.simpleName} onCleared()...")
-    }
 
     fun generateNumber() {
         number = Random().nextInt()
