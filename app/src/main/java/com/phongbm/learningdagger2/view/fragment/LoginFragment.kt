@@ -75,7 +75,7 @@ class LoginFragment : Fragment(), CoroutineScope, View.OnClickListener {
             if (result) {
                 Toast.makeText(context!!, "Successful", Toast.LENGTH_SHORT).show()
 
-                findNavController().navigate(R.id.salesInvoiceFragment, null, null)
+                findNavController().navigate(R.id.homeFragment, null, null)
             } else {
                 Toast.makeText(context!!, "Failed", Toast.LENGTH_SHORT).show()
             }

@@ -11,7 +11,22 @@
         tools:layout="@layout/fragment_login" />
 
     <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.phongbm.learningdagger2.view.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
         android:id="@+id/salesInvoiceFragment"
         android:name="com.phongbm.learningdagger2.view.invoice.fragment.SalesInvoiceFragment"
         tools:layout="@layout/fragment_sales_invoice" />
+
+    <fragment
+        android:id="@+id/taskMgtFragment"
+        android:name="com.phongbm.learningdagger2.view.task.TaskMgtFragment"
+        tools:layout="@layout/fragment_task_mgt" />
+
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.phongbm.learningdagger2.view.task.TaskDetailFragment"
+        tools:layout="@layout/fragment_task_detail" />
 </navigation>

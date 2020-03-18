@@ -14,7 +14,7 @@ open class BaseViewModel : AndroidViewModel(App.instance) {
     }
 
     override fun onCleared() {
-        Log.d(javaClass.name, "onCleared()...")
+        Log.d(javaClass.name, "${javaClass.simpleName} onCleared()...")
         super.onCleared()
     }
 
