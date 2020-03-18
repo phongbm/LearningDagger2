@@ -22,6 +22,7 @@ class SalesInvoiceFragment : BaseFragment() {
     }
 
     lateinit var salesInvoiceComponent: SalesInvoiceComponent
+        private set
 
     @Inject
     lateinit var salesInvoiceViewModel: SalesInvoiceViewModel

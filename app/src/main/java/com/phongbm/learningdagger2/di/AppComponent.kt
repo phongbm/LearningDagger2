@@ -12,12 +12,14 @@ import javax.inject.Singleton
 @Component(
         modules = [
             AppModule::class,
-            AppSubcomponentModule::class
+            AppSubcomponentModule::class,
+            ViewModelModule::class
         ]
 )
 interface AppComponent {
     fun inject(loginFragment: LoginFragment)
 
     fun salesInvoiceComponent(): SalesInvoiceComponent.Factory
+    fun taskMgtComponent(): TaskMgtComponent.Factory
 
 }

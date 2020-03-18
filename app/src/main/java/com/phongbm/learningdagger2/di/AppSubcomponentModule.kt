@@ -8,8 +8,8 @@ import dagger.Module
 
 @Module(
         subcomponents = [
-            SalesInvoiceComponent::class
+            SalesInvoiceComponent::class,
+            TaskMgtComponent::class
         ]
 )
-class AppSubcomponentModule {
-}
+class AppSubcomponentModule

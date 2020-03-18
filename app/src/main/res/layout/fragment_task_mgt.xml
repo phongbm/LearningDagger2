@@ -9,14 +9,30 @@
     tools:context=".view.task.TaskMgtFragment">
 
     <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Task Management" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Number: 0" />
+
+    <Button
+        android:id="@+id/btnGenerateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate number"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btnTaskDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Open Task detail" />
+        android:text="Open Task Detail"
+        android:textAllCaps="false" />
 </LinearLayout>

@@ -9,7 +9,15 @@
     tools:context=".view.task.TaskDetailFragment">
 
     <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Task Detail" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Number: 0" />
 </LinearLayout>
