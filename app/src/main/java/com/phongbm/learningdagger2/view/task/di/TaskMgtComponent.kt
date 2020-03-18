@@ -1,17 +1,12 @@
-package com.phongbm.learningdagger2.di
+package com.phongbm.learningdagger2.view.task.di
 
-import com.phongbm.learningdagger2.view.task.TaskDetailFragment
-import com.phongbm.learningdagger2.view.task.TaskMgtFragment
+import com.phongbm.learningdagger2.view.task.fragment.TaskDetailFragment
+import com.phongbm.learningdagger2.view.task.fragment.TaskMgtFragment
 import dagger.Subcomponent
-import javax.inject.Scope
 
 /**
  * Created by PhongBM on 03/18/2020
  */
-
-@Scope
-@Retention(AnnotationRetention.RUNTIME)
-annotation class TaskMgtScope
 
 @TaskMgtScope
 @Subcomponent(modules = [TaskMgtModule::class])

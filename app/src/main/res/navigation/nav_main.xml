@@ -22,11 +22,11 @@
 
     <fragment
         android:id="@+id/taskMgtFragment"
-        android:name="com.phongbm.learningdagger2.view.task.TaskMgtFragment"
+        android:name="com.phongbm.learningdagger2.view.task.fragment.TaskMgtFragment"
         tools:layout="@layout/fragment_task_mgt" />
 
     <fragment
         android:id="@+id/taskDetailFragment"
-        android:name="com.phongbm.learningdagger2.view.task.TaskDetailFragment"
+        android:name="com.phongbm.learningdagger2.view.task.fragment.TaskDetailFragment"
         tools:layout="@layout/fragment_task_detail" />
 </navigation>

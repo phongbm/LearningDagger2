@@ -2,7 +2,7 @@ package com.phongbm.learningdagger2.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.phongbm.learningdagger2.di.TaskMgtScope
+import com.phongbm.learningdagger2.view.task.di.TaskMgtScope
 import java.util.*
 import javax.inject.Inject
 
@@ -22,7 +22,6 @@ constructor() : ViewModel() {
 
     override fun onCleared() {
         Log.d(javaClass.name, "${javaClass.simpleName} onCleared()...")
-        super.onCleared()
     }
 
     fun generateNumber() {

@@ -2,6 +2,8 @@ package com.phongbm.learningdagger2.view.invoice.fragment
 
 import android.content.Context
 import android.util.Log
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.phongbm.learningdagger2.R
 import com.phongbm.learningdagger2.base.BaseFragment
 import com.phongbm.learningdagger2.viewmodel.SalesInvoiceViewModel
@@ -17,7 +19,9 @@ class ReservedInvoiceFragment : BaseFragment() {
     }
 
     @Inject
-    lateinit var salesInvoiceViewModel: SalesInvoiceViewModel
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel by viewModels<SalesInvoiceViewModel> { viewModelFactory }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -34,7 +38,7 @@ class ReservedInvoiceFragment : BaseFragment() {
     }
 
     override fun initializeData() {
-        Log.d(TAG, "initializeData()... ${salesInvoiceViewModel.hashCode()}")
+        Log.d(TAG, "initializeData()... ${viewModel.hashCode()}")
     }
 
 }

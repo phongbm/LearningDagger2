@@ -3,7 +3,7 @@ package com.phongbm.learningdagger2
 import android.app.Application
 import com.phongbm.learningdagger2.di.AppComponent
 import com.phongbm.learningdagger2.di.DaggerAppComponent
-import com.phongbm.learningdagger2.di.TaskMgtComponent
+import com.phongbm.learningdagger2.view.task.di.TaskMgtComponent
 
 /**
  * Created by PhongBM on 03/16/2020

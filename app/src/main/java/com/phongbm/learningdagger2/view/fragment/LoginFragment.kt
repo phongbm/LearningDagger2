@@ -1,62 +1,52 @@
 package com.phongbm.learningdagger2.view.fragment
 
 import android.content.Context
-import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.phongbm.learningdagger2.App
 import com.phongbm.learningdagger2.R
-import com.phongbm.learningdagger2.extension.inflate
+import com.phongbm.learningdagger2.base.BaseFragment
 import com.phongbm.learningdagger2.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.coroutines.CoroutineContext
 
 /**
  * Created by PhongBM on 03/17/2020
  */
 
-class LoginFragment : Fragment(), CoroutineScope, View.OnClickListener {
+class LoginFragment : BaseFragment() {
     companion object {
         private const val TAG = "LoginFragment"
     }
 
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main
-
     @Inject
-    lateinit var loginViewModel: LoginViewModel
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel by viewModels<LoginViewModel> { viewModelFactory }
 
     override fun onAttach(context: Context) {
-        Log.d(TAG, "onAttach()...")
+        super.onAttach(context)
 
         App.instance.appComponent.inject(this)
-
-        super.onAttach(context)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate()...")
-    }
+    override fun getContentViewId() = R.layout.fragment_login
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Log.d(TAG, "onCreateView()...")
-        return container.inflate(inflater, R.layout.fragment_login)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d(TAG, "onViewCreated()...")
-
+    override fun initializeViews() {
         btnSignIn.setOnClickListener(this)
+    }
+
+    override fun initializeComponents() {
+    }
+
+    override fun initializeData() {
+        Log.d(TAG, "initializeData()... ${viewModel.hashCode()}")
     }
 
     override fun onClick(view: View) {
@@ -71,11 +61,14 @@ class LoginFragment : Fragment(), CoroutineScope, View.OnClickListener {
             val username = edtUsername.text.toString()
             val password = edtPassword.text.toString()
 
-            val result = loginViewModel.signIn(username, password)
+            val result = viewModel.signIn(username, password)
             if (result) {
                 Toast.makeText(context!!, "Successful", Toast.LENGTH_SHORT).show()
 
-                findNavController().navigate(R.id.homeFragment, null, null)
+                val navOptions = NavOptions.Builder()
+                        .setPopUpTo(R.id.loginFragment, true)
+                        .build()
+                findNavController().navigate(R.id.homeFragment, null, navOptions)
             } else {
                 Toast.makeText(context!!, "Failed", Toast.LENGTH_SHORT).show()
             }

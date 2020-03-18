@@ -15,7 +15,6 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     override fun onCleared() {
         Log.d(javaClass.name, "${javaClass.simpleName} onCleared()...")
-        super.onCleared()
     }
 
 }

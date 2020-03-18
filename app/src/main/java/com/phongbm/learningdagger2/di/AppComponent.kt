@@ -1,6 +1,8 @@
 package com.phongbm.learningdagger2.di
 
 import com.phongbm.learningdagger2.view.fragment.LoginFragment
+import com.phongbm.learningdagger2.view.invoice.di.SalesInvoiceComponent
+import com.phongbm.learningdagger2.view.task.di.TaskMgtComponent
 import dagger.Component
 import javax.inject.Singleton
 

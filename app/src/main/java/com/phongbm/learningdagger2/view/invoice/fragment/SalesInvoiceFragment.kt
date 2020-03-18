@@ -2,12 +2,14 @@ package com.phongbm.learningdagger2.view.invoice.fragment
 
 import android.content.Context
 import android.util.Log
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.tabs.TabLayoutMediator
 import com.phongbm.learningdagger2.App
 import com.phongbm.learningdagger2.R
 import com.phongbm.learningdagger2.base.BaseFragment
-import com.phongbm.learningdagger2.di.SalesInvoiceComponent
 import com.phongbm.learningdagger2.view.invoice.adapter.SalesInvoiceFragmentAdapter
+import com.phongbm.learningdagger2.view.invoice.di.SalesInvoiceComponent
 import com.phongbm.learningdagger2.viewmodel.SalesInvoiceViewModel
 import kotlinx.android.synthetic.main.fragment_sales_invoice.*
 import javax.inject.Inject
@@ -25,7 +27,9 @@ class SalesInvoiceFragment : BaseFragment() {
         private set
 
     @Inject
-    lateinit var salesInvoiceViewModel: SalesInvoiceViewModel
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel by viewModels<SalesInvoiceViewModel> { viewModelFactory }
 
     private lateinit var salesInvoiceFragmentAdapter: SalesInvoiceFragmentAdapter
 
@@ -52,7 +56,7 @@ class SalesInvoiceFragment : BaseFragment() {
     }
 
     override fun initializeData() {
-        Log.d(TAG, "initializeData()... ${salesInvoiceViewModel.hashCode()}")
+        Log.d(TAG, "initializeData()... ${viewModel.hashCode()}")
     }
 
 }

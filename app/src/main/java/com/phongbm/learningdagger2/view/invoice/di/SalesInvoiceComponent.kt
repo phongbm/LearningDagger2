@@ -1,21 +1,16 @@
-package com.phongbm.learningdagger2.di
+package com.phongbm.learningdagger2.view.invoice.di
 
 import com.phongbm.learningdagger2.view.invoice.fragment.PendingInvoiceFragment
 import com.phongbm.learningdagger2.view.invoice.fragment.ReservedInvoiceFragment
 import com.phongbm.learningdagger2.view.invoice.fragment.SalesInvoiceFragment
 import dagger.Subcomponent
-import javax.inject.Scope
 
 /**
  * Created by PhongBM on 03/17/2020
  */
 
-@Scope
-@Retention(AnnotationRetention.RUNTIME)
-annotation class SalesInvoiceScope
-
 @SalesInvoiceScope
-@Subcomponent
+@Subcomponent(modules = [SalesInvoiceModule::class])
 interface SalesInvoiceComponent {
     @Subcomponent.Factory
     interface Factory {
