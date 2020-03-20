@@ -1,4 +1,4 @@
-package com.phongbm.learningdagger2.di
+package com.phongbm.learningdagger2.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

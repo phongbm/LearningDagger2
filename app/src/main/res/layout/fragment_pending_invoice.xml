@@ -14,10 +14,17 @@
         android:text="Pending Invoice" />
 
     <Button
-        android:id="@+id/btnTestDoSomething"
+        android:id="@+id/btnTest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="Test Do Something"
+        android:text="Test getAllInvoice()"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test getInvoiceData()"
         android:textAllCaps="false" />
 </LinearLayout>

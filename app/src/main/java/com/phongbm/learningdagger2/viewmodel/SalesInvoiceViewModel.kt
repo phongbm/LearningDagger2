@@ -1,9 +1,12 @@
 package com.phongbm.learningdagger2.viewmodel
 
 import android.util.Log
+import com.phongbm.learningdagger2.architecture.domain.model.InvoiceModel
+import com.phongbm.learningdagger2.architecture.domain.repository.InvoiceRepository
 import com.phongbm.learningdagger2.base.BaseViewModel
-import com.phongbm.learningdagger2.repository.InvoiceRepository
 import com.phongbm.learningdagger2.view.invoice.di.SalesInvoiceScope
+import io.reactivex.Single
+import java.util.*
 import javax.inject.Inject
 
 /**
@@ -21,10 +24,15 @@ constructor() : BaseViewModel() {
     @Inject
     lateinit var invoiceRepository: InvoiceRepository
 
-    fun testDoSomething() {
-        Log.d(TAG, "testDoSomething()... ${invoiceRepository.hashCode()}")
+    suspend fun getAllInvoices(): List<InvoiceModel> {
+        Log.d(TAG, "getAllInvoices()... ${invoiceRepository.hashCode()}")
 
-        invoiceRepository.testDoSomething()
+        return invoiceRepository.getAllInvoices()
+    }
+
+    fun getInvoiceData(): Single<Boolean> {
+        val invoiceId = UUID.randomUUID().toString()
+        return invoiceRepository.getInvoiceData(invoiceId)
     }
 
 }

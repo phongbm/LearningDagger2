@@ -1,7 +1,7 @@
 package com.phongbm.learningdagger2.viewmodel
 
+import com.phongbm.learningdagger2.architecture.domain.repository.UserRepository
 import com.phongbm.learningdagger2.base.BaseViewModel
-import com.phongbm.learningdagger2.repository.UserRepository
 import javax.inject.Inject
 
 /**

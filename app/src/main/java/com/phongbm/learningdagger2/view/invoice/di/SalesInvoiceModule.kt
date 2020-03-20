@@ -1,7 +1,7 @@
 package com.phongbm.learningdagger2.view.invoice.di
 
 import androidx.lifecycle.ViewModel
-import com.phongbm.learningdagger2.di.ViewModelKey
+import com.phongbm.learningdagger2.di.viewmodel.ViewModelKey
 import com.phongbm.learningdagger2.viewmodel.SalesInvoiceViewModel
 import dagger.Binds
 import dagger.Module

@@ -1,5 +1,9 @@
 package com.phongbm.learningdagger2.di
 
+import com.phongbm.learningdagger2.architecture.data.di.LocalDataSourceModule
+import com.phongbm.learningdagger2.architecture.data.di.NetworkModule
+import com.phongbm.learningdagger2.architecture.data.di.RepositoryModule
+import com.phongbm.learningdagger2.di.viewmodel.ViewModelModule
 import com.phongbm.learningdagger2.view.fragment.LoginFragment
 import com.phongbm.learningdagger2.view.fragment.ProfileEditFragment
 import com.phongbm.learningdagger2.view.fragment.ProfileFragment
@@ -18,7 +22,9 @@ import javax.inject.Singleton
             AppModule::class,
             AppSubcomponentModule::class,
             ViewModelModule::class,
-            RepositoryModule::class
+            RepositoryModule::class,
+            LocalDataSourceModule::class,
+            NetworkModule::class
         ]
 )
 interface AppComponent {
